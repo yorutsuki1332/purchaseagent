@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .icons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .icon-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .icon-item i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #8a2be2;
+        }
+        
+        .icon-item span {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .css-icons {
+            margin-top: 50px;
+        }
+        
+        .css-icon {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            margin: 0 auto 15px;
+        }
+        
+        /* Cart Icon */
+        .cart-icon {
+            position: relative;
+        }
+        
+        .cart-body {
+            width: 40px;
+            height: 30px;
+            background: #8a2be2;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+        }
+        
+        .cart-handle {
+            width: 25px;
+            height: 15px;
+            border: 3px solid #8a2be2;
+            border-bottom: none;
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            top: 10px;
+            right: 5px;
+        }
+        
+        /* Bag Icon */
+        .bag-icon {
+            position: relative;
+        }
+        
+        .bag-body {
+            width: 40px;
+            height: 45px;
+            background: #8a2be2;
+            border-radius: 8px;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+        }
+        
+        .bag-handle {
+            width: 20px;
+            height: 10px;
+            border: 3px solid #8a2be2;
+            border-bottom: none;
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            top: 0;
+            left: 20px;
+        }
+        
+        /* Tag Icon */
+        .tag-icon {
+            position: relative;
+        }
+        
+        .tag-body {
+            width: 40px;
+            height: 45px;
+            background: #8a2be2;
+            border-radius: 8px 8px 8px 0;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            transform: rotate(-45deg);
+        }
+        
+        .tag-hole {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Font Awesome Shopping Icons</h2>
+    <div class="icons-container">
+        <div class="icon-item">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-shopping-bag"></i>
+            <span>Bag</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-store"></i>
+            <span>Store</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-tag"></i>
+            <span>Tag</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-gift"></i>
+            <span>Gift</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-truck"></i>
+            <span>Shipping</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-money-bill"></i>
+            <span>Payment</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-box"></i>
+            <span>Package</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-percent"></i>
+            <span>Discount</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </div>
+        <div class="icon-item">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+        </div>
+    </div>
+    
+    <h2 class="css-icons">CSS-Only Shopping Icons</h2>
+    <div class="icons-container">
+        <div class="icon-item">
+            <div class="css-icon cart-icon">
+                <div class="cart-body"></div>
+                <div class="cart-handle"></div>
+            </div>
+            <span>CSS Cart</span>
+        </div>
+        <div class="icon-item">
+            <div class="css-icon bag-icon">
+                <div class="bag-body"></div>
+                <div class="bag-handle"></div>
+            </div>
+            <span>CSS Bag</span>
+        </div>
+        <div class="icon-item">
+            <div class="css-icon tag-icon">
+                <div class="tag-body"></div>
+                <div class="tag-hole"></div>
+            </div>
+            <span>CSS Tag</span>
+        </div>
+    </div>
+</body>
+</html>
