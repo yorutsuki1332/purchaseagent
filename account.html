@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <script src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
     <body>
         <div class="header">
-            <h1><a href="index.html">Cozy</a></h1>
+            <h1><a href="index.html">Cozye</a></h1>
             <div id='searchOverlay' class="overlay">
                 <span class="closebtn" onclick="document.getElementById('searchOverlay').style.display='none'">&times;</span>
                 <div class="overlay-content">
@@ -23,6 +31,21 @@
             </a>
             <div class="icon">
                 <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="container">
+            <div class="account-platform">
+                <h2>登入帳號</h2>
+                <label for="loginID">帳號:</label>
+                <input type="text" id="username" placeholder="帳號名稱/電郵地址/電話號碼" required><br>
+                <label for="password">密碼:</label>
+                <input type="password" id="password" placeholder="密碼" required><br>
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">記住我</label><br>
+                <button id="sumbit" type="submit" onclick=login()>登入</button>
+                <div id="FAILlogin" class="login-failure"></div>
+                <p>還沒有帳號？<a href="register.html">註冊新帳號</a></p>
+                <p><a href="forgot-password.html">忘記密碼？</a></p>
             </div>
         </div>
         <div class="footer">
