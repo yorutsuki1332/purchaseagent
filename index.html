@@ -45,17 +45,19 @@
             flex: 1;
         }
 
-        .filter-column {
-            width: 20%;
-            float: left;
-        }
 
-        .product-column {
-            width: 80%;
-            float: right;
-        }
 
         @media only screen and (min-width: 750px) {
+            .filter-column {
+                width: 20%;
+                float: left;
+            }
+
+            .product-column {
+                width: 80%;
+                float: right;
+            }
+
             .product-column-preview {
             width: calc(100% / 3 - 7px);
             float: left;
@@ -70,9 +72,17 @@
         }
         
         @media only screen and (max-width: 750px) {
+            .filter-column {
+                display: none;
+            }
+
+            .product-column {
+                width: auto;
+            }
+
             .product-column-preview {
-                width: 75%;
-                float: middle;
+                width: 80%;
+                float: left;
                 margin-top: 0;
                 margin-bottom: 10px;
                 text-align: center;
