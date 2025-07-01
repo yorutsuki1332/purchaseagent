@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a:link, a:visited, div.header a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: hotpink;
+}
+
+div.header {
+    background-color: rgba(178, 214, 199);
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+div.header h1 {
+    font-family: 'Lucida Handwriting', cursive;
+    text-align: left;
+    flex-grow: 1;
+}
+
+
+
+@media only screen and (min-width: 750px) {
+    .container {
+    flex: 1;
+    }
+
+    .filter-column {
+        width: 20%;
+        float: left;
+    }
+
+    .product-column {
+        width: 80%;
+        float: right;
+    }
+
+    .product-column-preview {
+    width: calc(100% / 3 - 7px);
+    float: left;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    }
+
+    .product-column-preview:nth-of-type(3n + 1) {
+                margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .filter-column {
+        display: none;
+    }
+
+    .product-column {
+        width: 100%;
+    }
+
+    .product-column-preview {
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .product-column-preview:nth-of-type(1) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;;
+    }
+    
+}
+
+.product-column-preview img {
+    width: 350px;
+    height: auto;
+}
+
+
+
+div.footer {
+    background-color: rgba(178, 214, 199);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+div.footer-content {
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.icon {
+    font-size: 1.8rem;
+    margin-right: 20px;
+}
+
+.icon i {
+    color: white;
+}
+
+.overlay {
+height: 100%;
+width: 100%;
+display: none;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: rgb(145, 180, 163);
+background-color: rgba(174, 211, 159, 0.9);
+}
+
+.overlay-content {
+position: relative;
+top: 46%;
+width: 80%;
+text-align: center;
+margin-top: 30px;
+margin: auto;
+}
+
+.overlay-content input[type=text] {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    width: 80%;
+    background-color: #f1f1f1;
+}
+
+.overlay-content button {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.overlay-content button:hover {
+    background-color: #ddd;
+}  
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.openbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.8rem;
+}
