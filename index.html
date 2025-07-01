@@ -45,6 +45,35 @@
             flex: 1;
         }
 
+        .filter-column {
+            width: 20%;
+            padding: 20px;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .product-column {
+            width: 80%;
+            float: right;
+        }
+
+        .product-column-preview {
+            width: calc(100% / 3 - 7px);
+            float: left;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .product-column-preview img {
+            width: 350px;
+            height: auto;
+        }
+
+        .product-column-preview:nth-of-type(3n + 1) {
+            margin-left: 0;
+        }
+
         div.footer {
             background-color: rgba(178, 214, 199);
             padding: 20px;
@@ -70,16 +99,84 @@
             color: white;
         }
 
+        .overlay {
+        height: 100%;
+        width: 100%;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(145, 180, 163);
+        background-color: rgba(174, 211, 159, 0.9);
+        }
+
+        .overlay-content {
+        position: relative;
+        top: 46%;
+        width: 80%;
+        text-align: center;
+        margin-top: 30px;
+        margin: auto;
+        }
+
+        .overlay-content input[type=text] {
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            width: 80%;
+            background-color: #f1f1f1;
+        }
+
+        .overlay-content button {
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        .overlay-content button:hover {
+            background-color: #ddd;
+        }  
+
+        .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+            color: white;
+            cursor: pointer;
+        }
         
+        .openbtn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+
+
     </style>
 </head>
 
 <body>
     <div class="header">
         <h1><a href="index.html">Shop Name</a></h1>
-        <div class="icon">
-            <i class="fas fa-search"></i>
+        <div id='searchOverlay' class="overlay">
+            <span class="closebtn" onclick="document.getElementById('searchOverlay').style.display='none'">&times;</span>
+            <div class="overlay-content">
+                <form action="action_page.php" method="get">
+                    <input type="text" name="query" placeholder="Search..." required>
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
         </div>
+        <button class="openbtn icon" onclick="document.getElementById('searchOverlay').style.display='block'">
+            <i class="fas fa-search"></i>
+        </button>
         <a href="account.html" class="icon">
             <i class="fas fa-user"></i>
         </a>
@@ -92,16 +189,64 @@
     </div>
 
     <div class="container">
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <div class="menu"></div>
+        <div class="content"></div>
+        <div class="filter-column">
+            <h2>Filter Column</h2>
+            <p>This is the left column content. You can add more information here.</p>
         </div>
-        <div class="content">
-            <h2>Welcome to my website. happy happy happy</h2>
-            <p>This is a simple website created using HTML and CSS. just try it</p>
+        <div class="product-column">
+            <h2>Product Column</h2>
+            <div class="product-column-preview">
+                <img src="product-preview/preview_01.jpg" alt="product 01">
+                <h3>Product 1</h3>
+                <p>$130</p>
+            </div>
+            <div class="product-column-preview">
+                <img src="product-preview/preview_02.jpg" alt="product 02">
+                <h3>Product 2</h3>
+                <p>$150</p>
+            </div>
+            <div class="product-column-preview">
+                <img src="product-preview/preview_03.jpg" alt="product 03">
+                <h3>Product 3</h3>
+                <p>$110</p>
+            </div>
+            <div class="product-column-preview">
+                <img src="product-preview/preview_04.jpg" alt="product 04">
+                <h3>Product 4</h3>
+                <p>$120</p>
+            </div>
+            <div class="product-column-preview">
+                <img src="product-preview/preview_05.jpg" alt="product 05">
+                <h3>Product 5</h3>
+                <p>$115</p>
+            </div>
+            <div class="product-column-preview">
+                <img src="product-preview/preview_06.jpg" alt="product 06">
+                <h3>Product 6</h3>
+                <p>$165</p>
+            </div>
+            <div class="product-column-preview">
+                <img src="product-preview/preview_07.jpg" alt="product 07">
+                <h3>Product 7</h3>
+                <p>$95</p>
+            </div>
+            <div class="product-column-preview">
+                <img src="product-preview/preview_08.jpg" alt="product 08">
+                <h3>Product 8</h3>
+                <p>$9999999999999999999999</p>
+            </div>
+            <div class="product-column-preview">
+                <img src="product-preview/preview_09.jpg" alt="product 09">
+                <h3>Product 9</h3>
+                <p>$∞</p>
+            </div>
+            <div class="product-column-preview">
+                <img src="product-preview/preview_10.jpg" alt="product 10">
+                <h3>Product 10</h3>
+                <p>$(我唔鍾意賣俾你喎)</p>
+            </div>
         </div>
     </div>
 
