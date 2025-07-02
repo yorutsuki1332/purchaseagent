@@ -35,19 +35,28 @@
         </div>
         <div class="container">
             <div class="account-platform">
-                <h2>登入帳號</h2>
-                <label for="loginID">帳號:</label>
-                <input type="text" id="username" placeholder="帳號名稱/電郵地址/電話號碼" required><br>
+                <h2>註冊新帳號</h2>
+                <input type="text" id="firstName" placeholder="名字" required>
+                <input type="text" id="lastName" placeholder="姓氏" required><br>
+                <input type="text" id="username" placeholder="帳號名稱" required><br>
+                <input type="text" id="phoneNumber" placeholder="電話號碼" required><br>
+                <input type="email" id="email" placeholder="電子郵件地址" required><br>
                 <label for="password">密碼:</label>
                 <input type="password" id="password" placeholder="密碼" required><br>
-                <input type="checkbox" id="rememberMe">
-                <label for="rememberMe">記住我</label><br>
-                <button id="submit" type="submit" onclick=login()>登入</button>
-                <div id="FAILlogin" class="login-failure"></div>
-                <p>還沒有帳號？<a href="register.html">註冊新帳號</a></p>
-                <p><a href="forgot-password.html">忘記密碼？</a></p>
+                <label for="confirmPassword">確認密碼:</label>
+                <input type="password" id="confirmPassword" placeholder="再次輸入密碼" required><br>
+                <select id="gender" required>
+                <option value="" disabled selected>性別</option>
+                <option value="male">男性</option>
+                <option value="female">女性</option>
+                <option value="other">保密</option>
+                </select><br>
+                <br><button id="submit" type="submit" onclick=register()>註冊</button>
+                <div id="FAILregister" class="register-failure"></div>
+                <p>已經有帳號？<a href="account.html">登入</a></p>
             </div>
         </div>
+
         <div class="footer">
             <div class="footer-content">
                 <a href="about.html">關於我們</a>

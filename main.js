@@ -11,17 +11,20 @@ function login() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    let usernameInput = document.getElementById("username");
+    let passwordInput = document.getElementById("password");
+    let loginButton = document.getElementById("submit");
 
-document.getElementById('username').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-        document.getElementById('sumbit').click();
+    function addEnterKeyListener(inputField) {
+        inputField.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                loginButton.click();
+            }
+        });
     }
-});
 
-document.getElementById('password').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-        document.getElementById('sumbit').click();
-    }
+    addEnterKeyListener(usernameInput);
+    addEnterKeyListener(passwordInput);
 });
