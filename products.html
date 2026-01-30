@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <script src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <header>
+        <h1><a href="index.html">Cozye</a></h1>
+        <div id='searchOverlay' class="overlay">
+            <span class="closebtn" onclick="document.getElementById('searchOverlay').style.display='none'">&times;</span>
+            <div class="overlay-content">
+                <form action="action_page.php" method="get">
+                    <input type="text" name="query" placeholder="Search..." required>
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <a href="index.html" class="icon">
+            <i class="fas fa-home"></i>
+        </a>
+        <button class="openbtn icon" onclick="document.getElementById('searchOverlay').style.display='block'">
+            <i class="fas fa-search"></i>
+        </button>
+        <a href="account.html" class="icon">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="cart.html" class="icon">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <div class="icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <main>
+        <img src="product-preview/preview_01.jpg" class="ProductPage" alt="Product Image">
+        <p class="ProductDescription">
+            本款服飾採用高品質柔軟布料製成，觸感舒適，親膚透氣，適合日常穿著。<br>
+            材質輕盈且耐用，不易變形，穿著自在無負擔，同時方便清洗與保養。<br>
+            簡約百搭的設計風格，無論單穿或搭配其他服裝皆十分合適，適用於休閒、工作或日常各種場合。
+        </p>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <a href="about.html">關於我們</a>
+            <br><a href="contact.html">聯絡我們</a></br>
+        </div>
+    </footer>
+</html>
