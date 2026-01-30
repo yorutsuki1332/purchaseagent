@@ -8,36 +8,34 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
-    <body>
-        <header>
-            <h1><a href="index.html">Cozye</a></h1>
-            <div id='searchOverlay' class="overlay">
-                <span class="closebtn" onclick="document.getElementById('searchOverlay').style.display='none'">&times;</span>
-                <div class="overlay-content">
-                    <form action="action_page.php" method="get">
-                        <input type="text" name="query" placeholder="Search..." required>
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
+    <header>
+        <h1><a href="index.html">Cozye</a></h1>
+        <div id='searchOverlay' class="overlay">
+            <span class="closebtn" onclick="document.getElementById('searchOverlay').style.display='none'">&times;</span>
+            <div class="overlay-content">
+                <form action="action_page.php" method="get">
+                    <input type="text" name="query" placeholder="Search..." required>
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
             </div>
-            <button class="openbtn icon" onclick="document.getElementById('searchOverlay').style.display='block'">
-                <i class="fas fa-search"></i>
-            </button>
-            <a href="account.html" class="icon">
-                <i class="fas fa-user"></i>
-            </a>
-            <a href="cart.html" class="icon">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-            <div class="icon">
-                <i class="fas fa-bars"></i>
-            </div>
-        </header>
-        <footer>
-            <div class="footer-content">
-                <a href="about.html">關於我們</a>
-                <br><a href="contact.html">聯絡我們</a></br>
-            </div>
-        </footer>
-    </body>
+        </div>
+        <button class="openbtn icon" onclick="document.getElementById('searchOverlay').style.display='block'">
+            <i class="fas fa-search"></i>
+        </button>
+        <a href="account.html" class="icon">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="cart.html" class="icon">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <div class="icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <footer>
+        <div class="footer-content">
+            <a href="about.html">關於我們</a>
+            <br><a href="contact.html">聯絡我們</a></br>
+        </div>
+    </footer>
 </html>

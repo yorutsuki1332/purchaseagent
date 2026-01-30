@@ -8,63 +8,61 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
-    <body>
-        <header>
-            <h1><a href="index.html">Cozye</a></h1>
-            <div id='searchOverlay' class="overlay">
-                <span class="closebtn" onclick="document.getElementById('searchOverlay').style.display='none'">&times;</span>
-                <div class="overlay-content">
-                    <form action="action_page.php" method="get">
-                        <input type="text" name="query" placeholder="Search..." required>
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
-            </div>
-            <button class="openbtn icon" onclick="document.getElementById('searchOverlay').style.display='block'">
-                <i class="fas fa-search"></i>
-            </button>
-            <a href="account.html" class="icon">
-                <i class="fas fa-user"></i>
-            </a>
-            <a href="cart.html" class="icon">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-            <div class="icon">
-                <i class="fas fa-bars"></i>
-            </div>
-        </header>
-        <div class="container">
-            <div class="account-platform">
-                <h2>註冊新帳號</h2>
-                <label for="username">帳號名稱:</label>
-                <input type="text" id="username" placeholder="帳號名稱" required><br>
-                <label for="gender">性別:</label>
-                <select id="gender" required>
-                    <option value="" disabled selected>請選擇</option>
-                    <option value="male">男性</option>
-                    <option value="female">女性</option>
-                    <option value="other">保密</option>
-                </select><br>
-                <label for="phoneNumber">電話號碼:</label>
-                <input type="tel" id="phoneNumber" placeholder="電話號碼" required><br>
-                <label for="email">電子郵件:</label>
-                <input type="email" id="email" placeholder="電子郵件地址" required><br>
-                <label for="password">密碼:</label>
-                <input type="password" id="password" placeholder="請輸入密碼" minlength="8" maxlength="15" required><br>
-                <label for="confirmPassword">確認密碼:</label>
-                <input type="password" id="confirmPassword" placeholder="再次輸入密碼" required><br>
-                
-                <br><button id="submit" type="submit" onclick=register()>註冊</button>
-                <div id="FAILregister" class="register-failure"></div>
-                <p>已經有帳號？<a href="account.html">登入</a></p>
+    <header>
+        <h1><a href="index.html">Cozye</a></h1>
+        <div id='searchOverlay' class="overlay">
+            <span class="closebtn" onclick="document.getElementById('searchOverlay').style.display='none'">&times;</span>
+            <div class="overlay-content">
+                <form action="action_page.php" method="get">
+                    <input type="text" name="query" placeholder="Search..." required>
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
             </div>
         </div>
+        <button class="openbtn icon" onclick="document.getElementById('searchOverlay').style.display='block'">
+            <i class="fas fa-search"></i>
+        </button>
+        <a href="account.html" class="icon">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="cart.html" class="icon">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <div class="icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <div class="container">
+        <div class="account-platform">
+            <h2>註冊新帳號</h2>
+            <label for="username">帳號名稱:</label>
+            <input type="text" id="username" placeholder="帳號名稱" required><br>
+            <label for="gender">性別:</label>
+            <select id="gender" required>
+                <option value="" disabled selected>請選擇</option>
+                <option value="male">男性</option>
+                <option value="female">女性</option>
+                <option value="other">保密</option>
+            </select><br>
+            <label for="phoneNumber">電話號碼:</label>
+            <input type="tel" id="phoneNumber" placeholder="電話號碼" required><br>
+            <label for="email">電子郵件:</label>
+            <input type="email" id="email" placeholder="電子郵件地址" required><br>
+            <label for="password">密碼:</label>
+            <input type="password" id="password" placeholder="請輸入密碼" minlength="8" maxlength="15" required><br>
+            <label for="confirmPassword">確認密碼:</label>
+            <input type="password" id="confirmPassword" placeholder="再次輸入密碼" required><br>
+            
+            <br><button id="submit" type="submit" onclick=register()>註冊</button>
+            <div id="FAILregister" class="register-failure"></div>
+            <p>已經有帳號？<a href="account.html">登入</a></p>
+        </div>
+    </div>
 
-        <footer>
-            <div class="footer-content">
-                <a href="about.html">關於我們</a>
-                <br><a href="contact.html">聯絡我們</a></br>
-            </div>
-        </footer>
-    </body>
+    <footer>
+        <div class="footer-content">
+            <a href="about.html">關於我們</a>
+            <br><a href="contact.html">聯絡我們</a></br>
+        </div>
+    </footer>
 </html>
